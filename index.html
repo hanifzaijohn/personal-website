@@ -15,6 +15,9 @@
           margin-left: auto;
           margin-right: auto;
         }
+        .innerScroll {
+          overflow-y: auto;
+      }
       </style>
     </head>
     <body>
@@ -37,14 +40,15 @@
                       </ion-buttons>
                 </ion-toolbar>
             </ion-header>
-                <ion-content fullscreen class="ion-padding">
+                <ion-content fullscreen class="ion-padding" style="padding:0px !important;">
                     <ion-button id="about-btn" expand="block" color="dark">About Me</ion-button>
                 </ion-content>
                 <ion-modal-controller id="abt-me-controller"></ion-modal-controller>
+                <ion-content>
+                  <img src="giphy.gif"/>
+                </ion-content>
               <ion-content>
-                <ion-card size-md="6" offset-md="3">
                 <img src="./blankspace.jpg" style="width:500px;height:400px;"/>
-              </ion-card>
             </ion-content>
         </ion-app>
         <script src="app.js"></script>

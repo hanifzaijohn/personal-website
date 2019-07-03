@@ -49,7 +49,6 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
     controller.create({
       component: 'modal-content'
     }).then(modal => {
-        console.log('does this work?');
       modal.present();
       currentModal = modal;
     });
