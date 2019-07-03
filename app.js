@@ -13,13 +13,13 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
           <ion-list>
             <ion-item>
               <ion-label>
-                <h2>I am a Software Dev</h2>
+                <h2><strong>I am a Software Dev.</strong></h2>
                 <p>Web Development & Augmented/Virtual reality. <br> I like making stuff that draws people in.</p>
               </ion-label>
             </ion-item>
             <ion-item>
               <ion-label>
-                <h2>I like:</h2>
+                <h2><strong>I like:</strong></h2>
 									<ul>
 										<li> Music (I really listen to everything) </li>
 										<p> Currently on a goth rock and trap vibe.
@@ -28,7 +28,7 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
 										<li> Food (I will try anything) </li>
 										<br>
 										<li> Vidya Games (Video Games) </li>
-										<p> Honestly I just like fighting Games. League is cool too. </p>
+										<p> Honestly I just like fighting Games. <em>League is cool too.</em> </p>
 										<br>
 									</ul>
               </ion-label>

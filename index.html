@@ -9,6 +9,13 @@
         />
         <script type="module" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.js"></script>
+      <style>
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      </style>
     </head>
     <body>
         <ion-app>
@@ -24,17 +31,20 @@
                         </ion-button>
                       </ion-buttons>
                       <ion-buttons slot="primary">
-                        <ion-button color="secondary">
+                        <ion-button>
                           <ion-icon slot="icon-only" name="more"></ion-icon>
                         </ion-button>
                       </ion-buttons>
                 </ion-toolbar>
             </ion-header>
-            <ion-content>
                 <ion-content fullscreen class="ion-padding">
-                    <ion-button id="about-btn" expand="block">About Me</ion-button>
+                    <ion-button id="about-btn" expand="block" color="dark">About Me</ion-button>
                 </ion-content>
                 <ion-modal-controller id="abt-me-controller"></ion-modal-controller>
+              <ion-content>
+                <ion-card size-md="6" offset-md="3">
+                <img src="./blankspace.jpg" style="width:500px;height:400px;"/>
+              </ion-card>
             </ion-content>
         </ion-app>
         <script src="app.js"></script>
