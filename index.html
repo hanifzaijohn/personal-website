@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Hanifzai</title>
+        <link rel="stylesheet" 
+        href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css"
+        />
+        <script type="module" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/@ionic/core@latest/dist/ionic/ionic.js"></script>
+    </head>
+    <body>
+        <ion-app>
+            <ion-header>
+                <ion-toolbar slot= "primary" color="dark">
+                    <ion-title>John Hanifzai</ion-title>
+                    <ion-buttons slot="secondary">
+                        <ion-button>
+                          <ion-icon slot="icon-only" name="contact"></ion-icon>
+                        </ion-button>
+                        <ion-button>
+                          <ion-icon slot="icon-only" name="search"></ion-icon>
+                        </ion-button>
+                      </ion-buttons>
+                      <ion-buttons slot="primary">
+                        <ion-button color="secondary">
+                          <ion-icon slot="icon-only" name="more"></ion-icon>
+                        </ion-button>
+                      </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <ion-content fullscreen class="ion-padding">
+                    <ion-button id="about-btn" expand="block">About Me</ion-button>
+                </ion-content>
+                <ion-modal-controller id="abt-me-controller"></ion-modal-controller>
+            </ion-content>
+        </ion-app>
+        <script src="app.js"></script>
+
+    </body>
+</html>
