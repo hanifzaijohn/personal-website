@@ -14,9 +14,6 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
             <ion-item>
               <ion-label>
                 <h2>I am a Software Dev</h2>
-                <ion-button>
-                <ion-icon slot="icon-only" name="contact"></ion-icon>
-              </ion-button>
                 <p>Web Development & Augmented/Virtual reality. <br> I like making stuff that draws people in.</p>
               </ion-label>
             </ion-item>
