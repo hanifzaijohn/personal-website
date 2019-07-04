@@ -32,6 +32,11 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
                     <br>
                   </ul>
             <ion-item>
+              <ion-text color="dark">
+            <h2><strong>I am currently learning:</strong><h2><p> Front-end & UI/UX.<br> Also mobile development. <br>Also more entertaintment based technologies.<br> Also whatever catches my interest.</p>
+              </ion-text>
+            </ion-item>
+            <ion-item>
               <ion-label>
                 <img src="7.gif" />
               </ion-label>
