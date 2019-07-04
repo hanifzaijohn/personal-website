@@ -28,10 +28,19 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
 										<li> Food (I will try anything) </li>
 										<br>
 										<li> Vidya Games (Video Games) </li>
-										<p> Honestly I just like fighting Games. <em>League is cool too.</em> </p>
-										<br>
-									</ul>
+										<p> Honestly I just like fighting games. <em>League is cool too.</em> </p>
+                    <br>
+                  </ul>
+            <ion-item>
+              <ion-label>
+                <img src="7.gif" />
               </ion-label>
+            </ion-item>
+            <ion-label>
+            <ion-item>
+            <em> If so, click the person icon after closing this. </em>
+            </ion-item>
+            </ion-label>
           </ion-list>
         </ion-content>
       `;
@@ -39,11 +48,13 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
   });
   let currentModal = null;
   const controller = document.querySelector('#abt-me-controller');
-  const button = document.querySelector("#about-btn");
-  if(button) button.addEventListener('click', createModal);
-  else console.log('Modal button NOT WORKING!!!!');
-
-  if(!controller) console.log('Controller is not working');
+  const toastController = document.querySelector('#sad-controller')
+  const abtBtn = document.querySelector("#about-btn");
+  const contactBtn = document.querySelector('#contact-info');
+  const sadBtn = document.querySelector('#sad-btn');
+  abtBtn.addEventListener('click', createModal);
+  sadBtn.addEventListener('click', handleButtonClick);
+  if(!controller) console.log('Modal controller is not working');
   
   function createModal() {
     controller.create({
@@ -58,4 +69,15 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
     if (currentModal) {
       currentModal.dismiss().then(() => { currentModal = null; });
     }
+  }
+
+  function handleButtonClick() {
+    toastController.create({
+      color: 'dark',
+      duration: 5000,
+      message: 'Don\'t be sad. I hope you find your happiness.',
+      showCloseButton: true
+    }).then(toast => {
+      toast.present();
+    });
   }
