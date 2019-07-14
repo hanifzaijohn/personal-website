@@ -50,7 +50,7 @@ const HTML_ABOUT_ME = `
 `;
 customElements.define('modal-content', class ModalContent extends HTMLElement {
     connectedCallback() {
-      this.innerHTML = HTML_PERSON;
+      //this.innerHTML = htmlContent;
     }
   });
   let currentModal = null;
@@ -59,10 +59,9 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
   const abtBtn = document.querySelector("#about-btn");
   const contactBtn = document.querySelector('#contact-info');
   const sadBtn = document.querySelector('#sad-btn');
-  abtBtn.addEventListener('click', () => createModal(HTML_ABOUTME));
+  abtBtn.addEventListener('click', () => createModal(HTML_ABOUT_ME));
   contactBtn.addEventListener('click', () => createModal(HTML_CONTACT_INFO));
   sadBtn.addEventListener('click', handleButtonClick);
-  if(!controller) console.log('Modal controller is not working');
   
   function createModal(htmlContent) {
     controller.create({
@@ -70,8 +69,9 @@ customElements.define('modal-content', class ModalContent extends HTMLElement {
     }).then(modal => {
       modal.present();
       currentModal = modal;
+      this.innerHTML = htmlContent;
     });
-    this.innerHTML = html;
+    this.innerHTML = htmlContent;
   }
   
   function dismissModal() {
